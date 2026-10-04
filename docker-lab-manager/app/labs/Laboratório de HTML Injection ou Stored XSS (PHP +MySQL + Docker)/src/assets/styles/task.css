@@ -1,0 +1,144 @@
+/* =========================================================
+   ESTILOS DA PÁGINA TASK.HTML (Visualização de Detalhes)
+   ========================================================= */
+
+/* Container que centraliza o card */
+#task-view {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* O cartão branco grande */
+.task-card-full {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px; /* Mais largo que o formulário para facilitar leitura */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Cabeçalho do Card (Badge de Status e ID) */
+.task-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.id-chamado {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Estilo das etiquetas de Status */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.status-badge.pendente {
+    background-color: #fff3cd; /* Amarelo */
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+.status-badge.fechado {
+    background-color: #d4edda; /* Verde */
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Título Principal */
+.task-card-full h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Caixa cinza com informações técnicas */
+.task-meta {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid #eee;
+}
+
+.task-meta p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.prioridade-alta {
+    color: #dc3545; /* Texto Vermelho */
+    font-weight: bold;
+}
+
+/* Linha divisória */
+.divisor {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Área de texto da descrição */
+.task-body h3 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.task-body p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Área dos botões inferiores */
+.task-actions {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; /* Alinha botões à direita */
+}
+
+/* Botão Azul (Responder) */
+.btn-responder {
+    padding: 12px 25px;
+    background-color: rgb(82, 63, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-responder:hover {
+    background-color: rgb(60, 45, 200);
+}
+
+/* Botão Branco/Cinza (Fechar) */
+.btn-fechar {
+    padding: 12px 25px;
+    background-color: white;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-fechar:hover {
+    background-color: #f2f2f2;
+    color: #333;
+    border-color: #999;
+}

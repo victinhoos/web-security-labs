@@ -1,0 +1,354 @@
+/* =========================================================
+   1. GLOBAL & HEADER (Vale para todas as telas)
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(82, 63, 255);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    color: rgb(200, 200, 200);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* =========================================================
+   2. TELA INICIAL: LISTA DE TASKS (index.html)
+   ========================================================= */
+#cont-taks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#cont-taks h1 {
+    color: #333;
+}
+
+.fileira {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.task a {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.task a:hover {
+    background-color: #e8f5e9;
+    border-color: yellowgreen;
+    transform: translateX(5px);
+}
+
+.task-direito {
+    flex-shrink: 0;
+}
+
+.task-esquerdo {
+    width: 100%;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.task-header h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: normal;
+    background-color: #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.task p {
+    color: #555;
+    line-height: 1.4;
+}
+
+#banner {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* =========================================================
+   3. TELA DE FORMULÁRIO: ABRIR CHAMADO (cadastro-task.html)
+   ========================================================= */
+#cont-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 100%;
+    min-height: 80vh;
+}
+
+#cont-form h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #e0e0e0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input, 
+.input-group select,
+.input-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-group textarea {
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+.input-group input:focus, 
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: rgb(82, 63, 255);
+    box-shadow: 0 0 5px rgba(82, 63, 255, 0.3);
+}
+
+.btn-cadastrar {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(82, 63, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-cadastrar:hover {
+    background-color: rgb(60, 45, 200);
+}
+
+/* =========================================================
+   4. TELA DE VISUALIZAÇÃO: DETALHES (task.html)
+   ========================================================= */
+#task-view {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.task-card-full {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.task-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.id-chamado {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Badges (Etiquetas de Status) */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.status-badge.pendente {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+.status-badge.fechado {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.task-card-full h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.task-meta {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid #eee;
+}
+
+.task-meta p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.prioridade-alta {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.divisor {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.task-body h3 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.task-body p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.task-actions {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.btn-responder {
+    padding: 12px 25px;
+    background-color: rgb(82, 63, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-responder:hover {
+    background-color: rgb(60, 45, 200);
+}
+
+.btn-fechar {
+    padding: 12px 25px;
+    background-color: white;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-fechar:hover {
+    background-color: #f2f2f2;
+    color: #333;
+    border-color: #999;
+}
